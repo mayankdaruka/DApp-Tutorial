@@ -2,11 +2,13 @@ import React, { Component, useEffect, useState } from "react";
 import TutorialTokenABI from "./contracts/TutorialToken.json";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import { TailSpin } from "react-loader-spinner";
 
 function TokenComponent(props) {
   const [account, setAccount] = useState("");
   const [tokenBalance, setTokenBalance] = useState(0);
   const [contract, setContract] = useState(null);
+  const [loading, setLoading] = useState(false);
   const accounts = [
     "0x7bEe8fB7273dd57b7B31d2551f5A9E3Fc56B4E01",
     "0xe900DBf9230b037A4AEc84511e41d673D7dE31fc",
@@ -33,9 +35,14 @@ function TokenComponent(props) {
     const web3 = props.web3;
     console.log(accountOption);
     console.log(amountOption);
+    setLoading(true);
     await contract.methods
       .transfer(accountOption, web3.utils.toWei(String(amountOption), "ether"))
-      .send({ from: account });
+      .send({ from: account })
+      .on("error", (error) => {
+        setLoading(false);
+      });
+    setLoading(false);
   };
 
   return (
@@ -54,7 +61,16 @@ function TokenComponent(props) {
         placeholder="Send amount:"
         onChange={(option) => setAmountOption(option.value)}
       />
-      <button onClick={sendTokens}>Send Tokens</button>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{ flex: 1 }}>
+          <button onClick={sendTokens}>Send Tokens</button>
+        </div>
+        {loading && (
+          <div>
+            <TailSpin />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
