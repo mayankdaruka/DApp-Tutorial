@@ -72,7 +72,7 @@ class App extends Component {
     const { accounts, contract, web3 } = this.state;
 
     const addressFrom = accounts[0];
-    const addressTo = "0x98864132ec962992b0aa01bD0d1360b14e0abfad";
+    const addressTo = "0xe900DBf9230b037A4AEc84511e41d673D7dE31fc";
 
     const transactionParameters = {
       to: addressTo,

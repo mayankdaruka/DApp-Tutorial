@@ -31,7 +31,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x48e865965181b98b62116944c622003e2b50a0d941012a4880eca8768d6e25f1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6d4fc25b768fd552913c0d46c5f698e6abfef1b5651b56455da2ea3764d629b2\",\"dweb:/ipfs/QmRPq2pyYtaUokpjuyqBo1jD1CgG8AyZm3towzjfySoHHa\"]}},\"version\":1}",
@@ -988,9 +989,7 @@
   "ast": {
     "absolutePath": "project:/contracts/SimpleStorage.sol",
     "exportedSymbols": {
-      "SimpleStorage": [
-        697
-      ]
+      "SimpleStorage": [697]
     },
     "id": 698,
     "license": "MIT",
@@ -998,15 +997,7 @@
     "nodes": [
       {
         "id": 672,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".21",
-          "<",
-          "8.10",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".21", "<", "8.10", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:33:4"
       },
@@ -1018,9 +1009,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 697,
-        "linearizedBaseContracts": [
-          697
-        ],
+        "linearizedBaseContracts": [697],
         "name": "SimpleStorage",
         "nameLocation": "76:13:4",
         "nodeType": "ContractDefinition",
@@ -1298,9 +1287,7 @@
   "legacyAST": {
     "absolutePath": "project:/contracts/SimpleStorage.sol",
     "exportedSymbols": {
-      "SimpleStorage": [
-        697
-      ]
+      "SimpleStorage": [697]
     },
     "id": 698,
     "license": "MIT",
@@ -1308,15 +1295,7 @@
     "nodes": [
       {
         "id": 672,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".21",
-          "<",
-          "8.10",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".21", "<", "8.10", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:33:4"
       },
@@ -1328,9 +1307,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 697,
-        "linearizedBaseContracts": [
-          697
-        ],
+        "linearizedBaseContracts": [697],
         "name": "SimpleStorage",
         "nameLocation": "76:13:4",
         "nodeType": "ContractDefinition",
@@ -1613,12 +1590,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xe60267B815f6CD8B66FD6b47c43529F31C7C3400",
-      "transactionHash": "0xa49e13975565c46eec075615b0bc015b377398c59ddc1363748ee0f76edc550b"
+      "address": "0x0C4C88074D157Ac9b987501281f0f9f5C565d3D9",
+      "transactionHash": "0x98452bedb202fb81dd8229f391ee5ef43b1a786ff76af5fa5d48b302abe0ab93"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-02-06T22:09:43.744Z",
+  "updatedAt": "2022-02-06T23:24:12.464Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
